@@ -61,6 +61,8 @@ public class Imovel {
             throw new IllegalArgumentException("Impossivel calcular sem informar bairro");
         } else if (finalidade == null) {
             throw new IllegalArgumentException("Finalidade não informada");
+        } else if (bairro.getCoeficienteIptu() <= 0) {
+            throw new IllegalArgumentException("Valor de coeficiente invalido");
         }
         
         double iptu;

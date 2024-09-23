@@ -148,8 +148,9 @@ public class ImovelTest {
                 imovel.setArea(-5);
             }
         );
-        String result = "Valor de área invalido";
-        assertEquals(exception.getMessage(), result);
+        String result = exception.getMessage();
+        String expected = "Valor de área invalido";
+        assertEquals(expected, result);
     }
     
     @Test
@@ -163,7 +164,8 @@ public class ImovelTest {
                 imovel.calcularIptu();
             }
         );
-        String result = "Valor de área invalido";
-        assertEquals(exception.getMessage(), result);
+        String esperado = "Finalidade";
+        String result = exception.getMessage();
+        assertEquals(esperado, result);
     }
 }
