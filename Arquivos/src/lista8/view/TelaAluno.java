@@ -4,6 +4,7 @@
  */
 package lista8.view;
 
+import javax.swing.JOptionPane;
 import lista8.model.Aluno;
 
 /**
@@ -140,19 +141,24 @@ public class TelaAluno extends javax.swing.JFrame {
     }//GEN-LAST:event_jBtCancelarActionPerformed
 
     private void jBtConfirmarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtConfirmarActionPerformed
-        int matricula = Integer.parseInt(this.jTfMatricula.getText().trim());
-        
-        String nome = this.jTfNomeAluno.getText().trim();
-        
-        double notaEnem = Double.parseDouble(this.jTfNotaEnem.getText().trim());
-        
-        Aluno aluno = new Aluno(matricula, nome, notaEnem);
-        
-        this.telaTurma.getTurma().incluirAluno(aluno);
-        
-        jTfNomeAluno.setText(null);
-        jTfMatricula.setText(null);
-        jTfNotaEnem.setText(null);
+        try {            
+            int matricula = Integer.parseInt(this.jTfMatricula.getText().trim());
+
+            String nome = this.jTfNomeAluno.getText().trim();
+
+            double notaEnem = Double.parseDouble(this.jTfNotaEnem.getText().trim());
+
+            Aluno aluno = new Aluno(matricula, nome, notaEnem);
+
+            this.telaTurma.getTurma().incluirAluno(aluno);
+
+            jTfNomeAluno.setText(null);
+            jTfMatricula.setText(null);
+            jTfNotaEnem.setText(null);
+            
+        } catch (IllegalArgumentException error) {
+            JOptionPane.showMessageDialog(null, error.getMessage());
+        }
     }//GEN-LAST:event_jBtConfirmarActionPerformed
           
     /**

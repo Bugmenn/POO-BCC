@@ -4,21 +4,19 @@
  */
 package lista8.view;
 
+import javax.swing.JTextArea;
+
 /**
  *
  * @author gabri
  */
 public class TelaListar extends javax.swing.JFrame {
-
-    private TelaTurma telaTurma;
     
     /**
      * Creates new form TelaListar
      */
-    public TelaListar(TelaTurma telaTurma) {
-        this.telaTurma = telaTurma;
+    public TelaListar() {
         initComponents();
-        jTaListar.setText(telaTurma.Listar());
     }
 
     /**
@@ -78,6 +76,10 @@ public class TelaListar extends javax.swing.JFrame {
         this.setVisible(false);
     }//GEN-LAST:event_jButton1ActionPerformed
 
+    public JTextArea getTextArea() {
+        return  jTaListar;
+    }
+    
     /**
      * @param args the command line arguments
      */

@@ -214,7 +214,7 @@ public class TelaTurma extends javax.swing.JFrame {
             
             Turno turno = jRbMatutino.isSelected() ? Turno.MATUTINO : (jRbVespertino.isSelected() ? Turno.VESPERTINO : Turno.NOTURNO);
                         
-            ArrayList<Aluno> alunos = new ArrayList<>();
+            ArrayList<Aluno> alunos = new ArrayList<>(); 
             
             String texto = jComboBox1.getSelectedItem().toString();
             Titulacao titulacao = texto.equals("Graduação") ? Titulacao.GRADUACAO : (texto.equals("Mestrado") ? Titulacao.MESTRADO : Titulacao.DOUTORADO);
@@ -233,8 +233,9 @@ public class TelaTurma extends javax.swing.JFrame {
     }//GEN-LAST:event_jBtIncluirAlunoActionPerformed
 
     private void jBtListarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtListarActionPerformed
-        TelaListar telaListar = new TelaListar(this);
+        TelaListar telaListar = new TelaListar();
        telaListar.setVisible(true);
+       telaListar.getTextArea().setText(this.Listar());
     }//GEN-LAST:event_jBtListarActionPerformed
     
     public Turma getTurma() {
