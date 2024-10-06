@@ -20,6 +20,7 @@ public class Triangulo extends Figura{
         this.lado3 = lado3;
     }
     
+    @Override
     public double calcularArea() {
         double p = (lado1+lado2+lado3)/2;
         

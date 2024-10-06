@@ -18,6 +18,7 @@ public class Retangulo extends Figura{
         this.altura = altura;
     }
     
+    @Override
     public double calcularArea() {
         return largura * altura;
     }

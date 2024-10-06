@@ -16,6 +16,7 @@ public class Circulo extends Figura{
         this.raio = raio;
     }
     
+    @Override
     public double calcularArea() {
         return Math.PI * (raio*raio);
     }
