@@ -2,10 +2,10 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package lista15.view;
+package lista15.q1.view;
 
 import javax.swing.JOptionPane;
-import lista15.model.Aluno;
+import lista15.q1.model.Aluno;
 
 /**
  *
